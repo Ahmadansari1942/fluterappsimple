@@ -1,0 +1,24 @@
+# Flutter
+build/
+.dart_tool/
+.flutter-plugins
+.packages
+*.iml
+*.lock
+
+# Environment
+.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Misc
+.env.local
+*.log

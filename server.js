@@ -9,9 +9,8 @@ const app = express();
 app.use(express.json());
 app.use(cors({
   origin: [
-    'http://localhost:3000',
-    'http://localhost:8080',
-    process.env.AMPLIFY_URL || '*'
+    http://47.128.239.61:5000/api/articles
+    process.env.AMPLIFY_URL || 'https://main.d1ynnrlj3b1zmq.amplifyapp.com/'
   ],
   credentials: true
 }));

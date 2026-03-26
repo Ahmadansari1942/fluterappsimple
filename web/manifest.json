@@ -1,0 +1,54 @@
+{
+    "name": "AhmadBlog",
+    "short_name": "AhmadBlog",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
+    "description": "Ahmad Blog - Technology, Creativity, Lifestyle Articles",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "icons/Icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-maskable-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/Icon-maskable-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}
+```
+
+---
+
+## 🎯 GITHUB PE KAISE ADD KARO?
+
+### **OPTION 1: GitHub Web Interface (EASY)**
+```
+1. github.com → Ahmadansari1942 → fluterappsimple
+2. Click "Add file" → "Create new file"
+3. File name: web/index.html
+4. Paste index.html content (above)
+5. Click "Commit new file"
+
+Repeat for manifest.json:
+1. Click "Add file" → "Create new file"
+2. File name: web/manifest.json
+3. Paste manifest.json content (above)
+4. Click "Commit new file"

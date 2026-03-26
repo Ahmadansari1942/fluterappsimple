@@ -4,18 +4,16 @@ frontend:
   phases:
     preBuild:
       commands:
+        - git clone https://github.com/flutter/flutter.git -b stable --depth 1
+        - export PATH="$PATH:$PWD/flutter/bin"
         - flutter pub get
         
     build:
       commands:
+        - export PATH="$PATH:$PWD/flutter/bin"
         - flutter build web --release
         
   artifacts:
     baseDirectory: build/web
     files:
       - '**/*'
-      
-  cache:
-    paths:
-      - '/root/.pub-cache/**/*'
-      - '.dart_tool/**/*'

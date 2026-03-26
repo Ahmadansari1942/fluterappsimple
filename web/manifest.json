@@ -33,22 +33,4 @@
         }
     ]
 }
-```
 
----
-
-## 🎯 GITHUB PE KAISE ADD KARO?
-
-### **OPTION 1: GitHub Web Interface (EASY)**
-```
-1. github.com → Ahmadansari1942 → fluterappsimple
-2. Click "Add file" → "Create new file"
-3. File name: web/index.html
-4. Paste index.html content (above)
-5. Click "Commit new file"
-
-Repeat for manifest.json:
-1. Click "Add file" → "Create new file"
-2. File name: web/manifest.json
-3. Paste manifest.json content (above)
-4. Click "Commit new file"

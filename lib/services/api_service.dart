@@ -1,4 +1,4 @@
-import 'package:flutter_dotenv/flutter_dotenv.dart';
+
 import 'package:http/http.dart' as http;
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'dart:convert';
@@ -8,10 +8,10 @@ class ApiService {
   late String baseUrl;
   late int timeout;
 
-  ApiService() {
-    baseUrl = dotenv.env['BACKEND_URL'] ?? 'http://localhost:5000';
-    timeout = int.parse(dotenv.env['API_TIMEOUT'] ?? '30');
-  }
+
+  static const String baseUrl = "https://ahmadansari.site"; // apna domain
+  static const int timeout = 30;
+}
 
   // Get all articles
   Future<List<Article>> getArticles() async {

@@ -1,31 +1,22 @@
-
 import 'package:http/http.dart' as http;
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'dart:convert';
 import '../models/article_model.dart';
 
 class ApiService {
-  late String baseUrl;
-  late int timeout;
-
-
-  static const String baseUrl = "https://ahmadansari.site"; // apna domain
+  static const String baseUrl = "https://ahmadansari.site";
   static const int timeout = 30;
-}
 
   // Get all articles
   Future<List<Article>> getArticles() async {
     try {
-      print('Fetching from: $baseUrl/api/articles');
-      
       final response = await http
           .get(Uri.parse('$baseUrl/api/articles'))
-          .timeout(Duration(seconds: timeout));
+          .timeout(const Duration(seconds: timeout));
 
       if (response.statusCode == 200) {
         final jsonData = jsonDecode(response.body);
         final List<dynamic> data = jsonData['data'] ?? [];
-        
+
         return data.map((item) => Article.fromJson(item)).toList();
       } else {
         throw Exception('Failed to load articles: ${response.statusCode}');
@@ -41,7 +32,7 @@ class ApiService {
     try {
       final response = await http
           .get(Uri.parse('$baseUrl/api/articles/$id'))
-          .timeout(Duration(seconds: timeout));
+          .timeout(const Duration(seconds: timeout));
 
       if (response.statusCode == 200) {
         final jsonData = jsonDecode(response.body);
@@ -76,7 +67,7 @@ class ApiService {
               'image_url': imageUrl,
             }),
           )
-          .timeout(Duration(seconds: timeout));
+          .timeout(const Duration(seconds: timeout));
 
       if (response.statusCode == 201) {
         final jsonData = jsonDecode(response.body);
@@ -112,7 +103,7 @@ class ApiService {
               'image_url': imageUrl,
             }),
           )
-          .timeout(Duration(seconds: timeout));
+          .timeout(const Duration(seconds: timeout));
 
       if (response.statusCode == 200) {
         final jsonData = jsonDecode(response.body);
@@ -131,7 +122,7 @@ class ApiService {
     try {
       final response = await http
           .delete(Uri.parse('$baseUrl/api/articles/$id'))
-          .timeout(Duration(seconds: timeout));
+          .timeout(const Duration(seconds: timeout));
 
       if (response.statusCode != 200) {
         throw Exception('Failed to delete article');

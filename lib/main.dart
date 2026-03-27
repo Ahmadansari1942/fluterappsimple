@@ -7,7 +7,7 @@ void main() async {
   try {
     await dotenv.load(fileName: ".env");
   } catch (e) {
-    print('Note: .env file not found (normal for web)');
+    print('Note: .env file not found (normal for web). Using Amplify env vars.');
   }
   
   runApp(const MyApp());

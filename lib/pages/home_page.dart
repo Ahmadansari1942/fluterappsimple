@@ -284,7 +284,7 @@ class _ArticleCard extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        article.createdAt?.substring(0, 10) ?? '',
+                       article.createdAt != null ? article.createdAt!.toString().substring(0, 10) : '',
                         style: TextStyle(color: Colors.grey[600], fontSize: 11),
                       ),
                     ],

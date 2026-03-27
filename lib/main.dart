@@ -1,15 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:provider/provider.dart';
 import 'pages/home_page.dart';
 
-void main() async {
-  try {
-    await dotenv.load(fileName: ".env");
-  } catch (e) {
-    print('Note: .env file not found (normal for web). Using Amplify env vars.');
-  }
-  
+void main() {
   runApp(const MyApp());
 }
 

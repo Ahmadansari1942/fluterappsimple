@@ -4,7 +4,14 @@ import 'package:provider/provider.dart';
 import 'pages/home_page.dart';
 
 void main() async {
-  await dotenv.load(fileName: ".env");
+  // Load .env only for mobile/desktop
+  // For web, environment variables come from Amplify
+  try {
+    await dotenv.load(fileName: ".env");
+  } catch (e) {
+    print('Note: .env file not found (normal for web). Using Amplify env vars.');
+  }
+  
   runApp(const MyApp());
 }
 

@@ -1,4 +1,4 @@
-# 📱 AhmadBlog - Flutter App,
+# 📱 AhmadBlog - Flutter App
 
 A beautiful Flutter application for sharing articles about technology, creativity, lifestyle, and more.
 
